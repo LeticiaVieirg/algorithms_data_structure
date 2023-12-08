@@ -19,7 +19,7 @@
 ### Folder list
 
 
-*Unity 1*
+*Unidade 1*
 - `Dynamic matrix:` Activities on dynamic allocation of matrices in the C language.
 
 - `Pointers:` Activities related to pointers in C.
@@ -33,7 +33,7 @@
 
 ### Content
 
-`Unit 1`
+`Unidade 1`
 - `.txt` file contains the logic used to solve the questions of each activity in the folder.
 - `.pdf` files contain lists of exercises with questions about each content.
 - `.c` files contain the solution to each question in the exercise lists.
