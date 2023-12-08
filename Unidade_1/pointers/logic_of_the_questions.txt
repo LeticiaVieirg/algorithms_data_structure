@@ -1,3 +1,6 @@
-#question 1
+Question 1
+
 Nessa questao verifica-se os valores de x, y e *p. Inicialmente o y vale 0, em seguida o p vale o endereço da memoria de y e posteriormente x vale o conteudo de p, ou seja 0. Adiante, o valor de x muda de 0 para 4. Logo, o conteudo de p eh adicionado uma unidade, passando a valer 1. Eh feito um decrementado de uma unidade em x, que antes valia 4 agora vale 3. O conteudo de p somado ele mesmo mais o valor de x, sendo 1+4=5, p vale 5.
 Por fim, sao mostrados os valores x=3, y=0 e p=5.
+
+Question 2
