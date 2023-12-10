@@ -1,0 +1,8 @@
+Questao 1: O programa tem o objetivo receber informações dos entrevistados a respeito da sua opinião em relação a um determinado produto. Essas informações sao armazenadas separadamente de acordo com o sexo e eh calculado a porcentagem de pessoas que gostaram ou nao do produto em cada grupo.
+
+- passo 1: O programa pede duas informações principais, uma sendo o sexo e a outra sendo a opiniao. Essas informações podem ser armazenadas em um vetor de matriz.
+           Para isso, eh necessario inserir a quantidade de usuarios e alocar de maneira dinamica no espaço da memoria.
+- passo 2: Em seguida, é feita uma contagem do número de homens e mulheres e quantos gostaram do produto em cada grupo, para que seja possível calcular a porcentagem de pessoas que gostaram do produto em cada categoria.
+- passo 3: Por fim, o programa exibe as informações na tela e libera a memória alocada dinamicamente.
+
+Questao 2: 
