@@ -3,7 +3,8 @@ Questao 1: O programa tem o objetivo receber informações dos entrevistados a r
 
 - passo 1: O programa pede duas informações principais, uma sendo o sexo e a outra sendo a opiniao. Essas informações podem ser armazenadas em um vetor de matriz.
            Para isso, eh necessario inserir a quantidade de usuarios e alocar de maneira dinamica no espaço da memoria.
-- passo 2: Contagem da quantidade de homens e mulheres que responderam, bem como sua opniao sobre o produto. As informações colhidas devem ser separadas de acordo com cada grupo, permitindo o calculo das porcentagem de pessoas que gostaram do produto.
+- passo 2: Contagem da quantidade de homens e mulheres que responderam, bem como sua opniao sobre o produto. 
+           As informações colhidas devem ser separadas de acordo com cada grupo, permitindo o calculo das porcentagem de pessoas que gostaram do produto.
 - passo 3: O programa exibe as informações na tela e a memória alocada dinamicamente eh liberada.
 
 Questao 2: 
