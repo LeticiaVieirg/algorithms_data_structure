@@ -1,3 +1,5 @@
+//Alocaçao dinamica de vetores
+
 #include <stdio.h>
 #include <stdlib.h>
 
