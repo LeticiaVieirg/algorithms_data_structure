@@ -1,4 +1,5 @@
-Questao 1: O programa tem o objetivo receber informações dos entrevistados a respeito da sua opinião em relação a um determinado produto. Essas informações sao armazenadas separadamente de acordo com o sexo e eh calculado a porcentagem de pessoas que gostaram ou nao do produto em cada grupo.
+Questao 1: O programa tem o objetivo receber informações dos entrevistados a respeito da sua opinião em relação a um determinado produto. 
+           Essas informações sao armazenadas separadamente de acordo com o sexo e eh calculado a porcentagem de pessoas que gostaram ou nao do produto em cada grupo.
 
 - passo 1: O programa pede duas informações principais, uma sendo o sexo e a outra sendo a opiniao. Essas informações podem ser armazenadas em um vetor de matriz.
            Para isso, eh necessario inserir a quantidade de usuarios e alocar de maneira dinamica no espaço da memoria.
