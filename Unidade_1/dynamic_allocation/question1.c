@@ -5,7 +5,7 @@
 
 int main(){
   //declaração das variaveis
-  int interviewed, female_liked, male_liked;
+  int interviewed, female_cont, male_cont, female_perc, male_perc;
   
   printf("Enter the number of interviewed: ");
   scanf("%d",&interviewed);
@@ -29,7 +29,16 @@ int main(){
     scanf("%c",&opinion[i]);
   }
 
+  //verificacao de respostas
+  if (sex[i] == "f" || sex[i] && opinion[i]=="l") {
+    female_cont++;
+  } if (opinion=="
 
+  if(sex[i]=="m" || opinion[i]=="d") {
+    male_cont++;
+  }
+
+  
 //calculos
 
 
