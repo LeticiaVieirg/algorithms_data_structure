@@ -5,7 +5,8 @@
 
 int main(){
   //declaração das variaveis
-  int interviewed, female_cont, male_cont, female_perc, male_perc;
+  int interviewed, female_cont, male_cont;
+  float female, male, female_perc, male_perc, female_like, male_like;
   
   printf("Enter the number of interviewed: ");
   scanf("%d",&interviewed);
@@ -15,35 +16,63 @@ int main(){
   char *opinion =(char *)malloc(interviewed*sizeof(char));
 
   //verificação da memoria disponivel
-  if (opinion==NULL || sex==NULL){
-    printf("Erro");
-    exit(1);
+  if (opinion==NULL || sex==NULL) { 
+      printf("Erro"); 
+      exit(1);
   }
 
   //preencher vetor e matriz
-  for (i=0; i<interwed;i++){
-    printf("\n Inform your gender F-female or M-male: " tolower(sex)); //verificar se foi digitado maiusculo ou minusculo e nao da erro
-    scanf("%c", &sex[i]);
+  for (i=0; i<interviewed;i++) {
+      printf("\n Inform your gender F-female or M-male: "); //tolower(sex)); //verificar se foi digitado maiusculo ou minusculo e nao da erro
+      scanf("%c", &sex[i]);
 
-    printf("\n Let us know your opinion! \nDid you L-like or D-dislike the product?"); //verificar da mesma forma
-    scanf("%c",&opinion[i]);
+      printf("\n Let us know your opinion! \nDid you L-like or D-dislike the product?"); //verificar da mesma forma
+      scanf("%c",&opinion[i]);
   }
 
   //verificacao de respostas
-  if (sex[i] == "f" || sex[i] && opinion[i]=="l") {
-    female_cont++;
-  } if (opinion=="
+  for (i=0; i<interviewed;i++) {
+      if (sex[i] == "f" || sex[i]=="F") {
+          female_cont++; 
 
-  if(sex[i]=="m" || opinion[i]=="d") {
-    male_cont++;
+          if (opinion[i]=="l" || opinion[i]=="L") {
+              female_like++;
+          }
+        
+      } else {
+          male_cont++;
+          if (opinion[i]=="d" || opinion[i]="D") {
+              male_like++;
+          }
+      }
+
   }
 
-  
+    
 //calculos
+  if (male==0) {
+      male_perc = male_like/1*100;
+  } else if (female == 0) {
+      female_perc = female_like/1*100;
+  } else {
+      male_perc = (female_like/male)*100;
+      female_perc = (female_like/female)*100;
+  }
 
+//exibir resultados
+  printf("\n-------------------------------------------------------------------");
+  printf("\nTotal de entrevistados masculino: %.0f \n %.2f %% gostaram do produto.", male, male_perc);
+  printf("\n-------------------------------------------------------------------");
+  printf("\n Total de entrevistados feminino: %.0f \n %.2f %% gostaram do produto.", female, female_perc);
+  printf("\n-------------------------------------------------------------------");
 
+//liberando memoria alocada.
+  free(sex);
+  for (i = 0; i < interviewed; i++) {
+      free(opinion[i]);
+  }
+    
+  free(opinion);
+  return 0;
 
-  
-//terminar
-  
 }
