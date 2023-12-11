@@ -28,7 +28,6 @@ int main(){
     printf("\n Let us know your opinion! \nDid you L-like or D-dislike the product?"); //verificar da mesma forma
     scanf("%c",&opinion[i]);
   }
-
   
 //terminar
 
