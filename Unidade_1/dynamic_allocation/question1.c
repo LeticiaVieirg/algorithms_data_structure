@@ -6,7 +6,7 @@
 int main(){
   //declaração das variaveis
   int interviewed, female_liked, male_liked;
-
+  
   printf("Enter the number of interviewed: ");
   scanf("%d",&interviewed);
 
