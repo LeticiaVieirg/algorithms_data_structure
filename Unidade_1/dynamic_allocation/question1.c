@@ -22,7 +22,8 @@ int main(){
   }
 
   //preencher vetor e matriz
-  for (i=0; i<interviewed;i++) {
+  int i=0;
+  for(int i=0; i<interviewed;i++) {
       printf("\n Inform your gender F-female or M-male: "); //tolower(sex)); //verificar se foi digitado maiusculo ou minusculo e nao da erro
       scanf("%c", &sex[i]);
 
@@ -31,6 +32,7 @@ int main(){
   }
 
   //verificacao de respostas
+  
   for (i=0; i<interviewed;i++) {
       if (sex[i] == "f" || sex[i]=="F") {
           female_cont++; 
@@ -42,7 +44,7 @@ int main(){
       } else {
           male_cont++;
           if (opinion[i]=="d" || opinion[i]="D") {
-              male_like++;
+              male_dislike++;
           }
       }
 
