@@ -6,7 +6,7 @@
 int main(){
   //declaração das variaveis
   int interviewed, female_cont, male_cont;
-  float female, male, female_perc, male_perc, female_like, male_like;
+  float female, male, female_perc, male_perc, female_like, male_dislike;
   
   printf("Enter the number of interviewed: ");
   scanf("%d",&interviewed);
@@ -51,7 +51,7 @@ int main(){
     
 //calculos
   if (male==0) {
-      male_perc = male_like/1*100;
+      male_perc = male_dislike/1*100;
   } else if (female == 0) {
       female_perc = female_like/1*100;
   } else {
@@ -60,11 +60,8 @@ int main(){
   }
 
 //exibir resultados
-  printf("\n-------------------------------------------------------------------");
-  printf("\nTotal de entrevistados masculino: %.0f \n %.2f %% gostaram do produto.", male, male_perc);
-  printf("\n-------------------------------------------------------------------");
+  printf("\nTotal de entrevistados masculino: %.0f \n %.2f %% nao gostaram do produto.", male, male_perc);
   printf("\n Total de entrevistados feminino: %.0f \n %.2f %% gostaram do produto.", female, female_perc);
-  printf("\n-------------------------------------------------------------------");
 
 //liberando memoria alocada.
   free(sex);
