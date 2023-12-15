@@ -13,6 +13,7 @@ int main(void) {
     //tipo vetor de ponteiro recebe tipo  do ponteiro malloc o tamanho*sizeof forcado tipo inteiro
     int * vetor = (int*) malloc(n*sizeof(int));
 
+    //verifica espaço da memoria
     if(vetor == NULL){
         printf("Erro na alocação da memória!");
         exit(1);
