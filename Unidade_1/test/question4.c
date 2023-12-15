@@ -3,9 +3,10 @@
 int main(){  
 
     int soma(int a, int b){  
-        int soma = 0;if (a > b){
-        for (int i = b+1; i < b; i++){
-            soma += i;
+        int soma = 0;
+        if (a > b){
+            for (int i = b+1; i < b; i++){
+                soma += i;
             }
         }
         else{
