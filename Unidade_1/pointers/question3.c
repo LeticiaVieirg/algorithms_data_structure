@@ -15,7 +15,7 @@ int main(void){
     int *p4 = &d; // declara o ponteiro p4 que aponta ele pra "d"
     *p4 = b + (*p1)++; // "d" recebe "b" + "a", e depois o valor de a é atualizado, com a=a+1
     
-    //saida: a=11, b=20, c=10, d=30
     printf("%d\t%d\t%d\t%d\n", a, b, c, d);
     return 0;
 }
+    //saida: a=11, b=20, c=10, d=30
