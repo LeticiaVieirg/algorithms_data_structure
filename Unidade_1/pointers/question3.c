@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main(void)
-{
+int main(void){
+    
     int a, b, c, d; //declara variaveis
     int *p1; // declara um ponteiro
     int *p2 = &a; //declara o ponteiro p2 e aponta pra "a"
