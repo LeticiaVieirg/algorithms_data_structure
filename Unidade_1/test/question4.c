@@ -2,19 +2,19 @@
 
 int main(){  
 
+    //declaracao da funcao soma
     int soma(int a, int b){  
         int soma = 0;
         if (a > b){
             for (int i = b+1; i < b; i++){
                 soma += i;
             }
-        }
-        else{
+        }else{
            for (int i = a+1; i <b; i++){
             soma += i;
             }
         }
-  return soma;
+return soma;
 }
 
 int main () {
