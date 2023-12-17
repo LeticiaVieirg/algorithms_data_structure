@@ -32,7 +32,6 @@ int main(){
   }
 
   //verificacao de respostas
-  
   for (i=0; i<interviewed;i++) {
       if (sex[i] == "f" || sex[i]=="F") {
           female_cont++; 
@@ -49,7 +48,6 @@ int main(){
       }
 
   }
-
     
 //calculos
   if (male==0) {
