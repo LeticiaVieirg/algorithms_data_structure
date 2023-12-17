@@ -20,8 +20,14 @@
 
 
 *Unidade 1*
-- `Dynamic matrix:` Activities on dynamic allocation of matrices in the C language.
+- `Matrices:` Activities on dynamic allocation of matrices in the C language.
 
+- `Struct:`  Activities on  Struct in the  C language.
+
+- `Extra:`Contains solutions to questions from the recommended book, as well as problems from the classroom, as well as other exercises designed for personal study.
+
+- `Test:` Level test for the algorithms discipline.
+  
 - `Pointers:` Activities related to pointers in C.
 
 - `Dynamic Allocation:` Activities related to dynamic memory allocation in the C language.
