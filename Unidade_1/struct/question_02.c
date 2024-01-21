@@ -25,3 +25,7 @@ void imprime(Pessoa * pessoa){
     printf("Numero do documento: %d\n", pessoa->numDocumento);
     printf("Idade: %d\n", pessoa->idade);
 } 
+
+void alteraIdade(Pessoa * pessoa, int novaIdade){
+    pessoa->idade = novaIdade;
+}
