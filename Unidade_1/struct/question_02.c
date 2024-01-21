@@ -49,3 +49,23 @@ void comparaIdade(Pessoa *pessoa, int quantidade) {
 	printf("A pessoa com a maior idade (mais velha) eh %s tem %d anos. \n", pessoa[iMaior].nome, maiorIdade );
     	printf("A pessoa com a menor idade (mais nova) eh %s tem %d anos. \n", pessoa[iMenor].nome, menorIdade );
 }
+
+int main() {
+    int quantidade;
+    printf("Informe a quantidade de pessoas:");
+    scanf("%d", &quantidade);
+    Pessoa *pessoa = malloc(quantidade* sizeof(Pessoa));
+
+    if (pessoa == NULL) {
+        printf("Erro na alocacao!");
+        exit(1);
+    }
+
+    preenche(pessoa, quantidade);
+    imprime(pessoa, quantidade);
+    alteraIdade(pessoa, quantidade);
+    comparaIdade(pessoa, quantidade);
+
+    free(pessoa);
+    return 0;
+}
