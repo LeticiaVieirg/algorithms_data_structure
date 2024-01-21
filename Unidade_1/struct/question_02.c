@@ -47,5 +47,5 @@ void comparaIdade(Pessoa *pessoa, int quantidade) {
         }
     }
 	printf("A pessoa com a maior idade (mais velha) eh %s tem %d anos. \n", pessoa[iMaior].nome, maiorIdade );
-    printf(""A pessoa com a menor idade (mais nova) eh %s tem %d anos. \n", pessoa[iMenor].nome, menorIdade );
+    	printf("A pessoa com a menor idade (mais nova) eh %s tem %d anos. \n", pessoa[iMenor].nome, menorIdade );
 }
