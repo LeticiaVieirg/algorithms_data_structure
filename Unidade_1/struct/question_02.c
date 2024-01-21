@@ -18,3 +18,10 @@ void preenche(Pessoa *pessoa){
     printf("Informe a idade da pessoa: ");
     scanf("%d", &pessoa->idade);
 }
+
+void imprime(Pessoa * pessoa){
+    printf("===Dados da Pessoa===");
+    printf("Nome: %s\n", pessoa->nome);
+    printf("Numero do documento: %d\n", pessoa->numDocumento);
+    printf("Idade: %d\n", pessoa->idade);
+} 
