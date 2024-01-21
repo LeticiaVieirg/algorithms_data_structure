@@ -7,3 +7,14 @@ typedef struct pessoa{
     int numDocumento;
     int idade;
 } Pessoa;
+
+void preenche(Pessoa *pessoa){
+    printf("Informe o nome da pessoa: ");
+    scanf(" %s", pessoa->nome);
+
+    printf("Informe o numero do documento: ");
+    scanf("%d", &pessoa->numDocumento);
+
+    printf("Informe a idade da pessoa: ");
+    scanf("%d", &pessoa->idade);
+}
