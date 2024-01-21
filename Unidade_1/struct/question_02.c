@@ -29,3 +29,23 @@ void imprime(Pessoa * pessoa){
 void alteraIdade(Pessoa * pessoa, int novaIdade){
     pessoa->idade = novaIdade;
 }
+
+void comparaIdade(Pessoa *pessoa, int quantidade) {
+    int i;
+    int maiorIdade=0;
+    int menorIdade=110;
+    int iMaior,iMenor;
+
+    for (i = 1; i < q; i++) {
+        if (pessoa[i].idade > maiorIdade) {
+           maiorIdade= f[i].idade;
+           iMaior=i;
+        }
+        if (pessoa[i].idade< menorIdade) {
+            menorIdade= p[i].idade;
+            iMenor=i;
+        }
+    }
+	printf("A pessoa com a maior idade (mais velha) eh %s tem %d anos. \n", pessoa[iMaior].nome, maiorIdade );
+    printf(""A pessoa com a menor idade (mais nova) eh %s tem %d anos. \n", pessoa[iMenor].nome, menorIdade );
+}
