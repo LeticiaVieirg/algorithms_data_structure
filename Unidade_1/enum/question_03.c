@@ -23,12 +23,12 @@ typedef struct data{
 } Data;
 
 void cadastro_data(Data *d){
-    printf("Cadastro: \n");
+    printf("***CADASTRO*** \n");
     printf("Informe o dia: ");
     scanf("%d", &d->dia);
   
     printf("Informe o mes: ");
-    printf("[1]JANEIRO  [2]FEVEREIRO  [3]MARCO  [4] ABRIL  [5]MAIO  [6] JUNHO \n");
+    printf("[1]JANEIRO  [2]FEVEREIRO  [3]MARCO  [4] ABRIL  [5]MAIO  [6]JUNHO \n");
     printf("[7]JULHO  [8]AGOSTO  [9]SETEMBRO  [10]OUTUBRO  [11]NOVEMBRO  [12]DEZEMBRO \n");
     scanf("%d", (int*)&d->mes);
   
