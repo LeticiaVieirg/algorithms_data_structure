@@ -13,7 +13,7 @@ typedef struct pessoa{
 } Pessoa;
 
 void cadastro_pessoa(Pessoa *p){
-    printf("===Cadastro=== \n");
+    printf("***CADASTRO***\n");
     printf("Informe o nome: ");
     scanf("%[^\n]", p->nome);
   
@@ -25,7 +25,7 @@ void cadastro_pessoa(Pessoa *p){
 }
 
 void imprime(Pessoa *p){
-    printf("Dados cadastrados: \n");
+    printf("***DADOS CADASTRADOS*** \n");
     printf("Nome: %s\n", p->nome);
     printf("Idade: %d\n", p->idade);
     printf("Genero: %s\n", p->genero_pessoa == Masculino ? "Masculino" : "Feminino");
