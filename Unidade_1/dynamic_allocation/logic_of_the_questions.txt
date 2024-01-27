@@ -7,4 +7,9 @@ Questao 1: O programa tem o objetivo receber informações dos entrevistados a r
            As informações colhidas devem ser separadas de acordo com cada grupo, permitindo o calculo das porcentagem de pessoas que gostaram do produto.
 - passo 3: O programa exibe as informações na tela e a memória alocada dinamicamente eh liberada.
 
-Questao 2: 
+Questao 2:
+
+- passo 1: É solicidado que o usuário informe o número de questões da prova, em seguida, alocado dinamicamente em um espaço na memória para o gabarito e também para as respostas daqueles alunos.
+- passo 2: O programa solicita que o usuário realize o preenchimento do gabarito e as respostas dos alunos conforme cada uma das questoes.
+- passo 3: Adiante, é feito os calculos das notas de cada aluno, por meio da comparação de suas respostas com o gabarito, sendo feita a contagem dos número de questões marcadas corretamente.
+- passo 4: Com isso, são imprimidas as notas de cada aluno e a porcentagem de aprovação. Concluindo com a liberação da memória alocada dinamicamente. 
