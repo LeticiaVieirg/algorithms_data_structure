@@ -14,7 +14,7 @@ typedef struct pessoa{
 
 void cadastro_pessoa(Pessoa *p){
     int opcao;
-    printf("=== Cadastro de Pessoas ===\n");
+    printf("Cadastro: \n");
     printf("Informe o nome: ");
     scanf("%[^\n]", p->nome);
     
@@ -34,7 +34,7 @@ int main(void){
     Pessoa *p = malloc(sizeof(Pessoa));
     cadastro_pessoa(p);
 
-    printf("===Dados cadastrados=== \n");
+    printf("Dados cadastrados \n");
     printf("Nome: %s\n", p->nome);
     printf("Idade: %d\n", p->idade);
     printf("Genero: %s\n", p->genero_pessoa.MASCULINO_FEMININO);
