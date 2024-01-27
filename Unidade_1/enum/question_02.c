@@ -15,7 +15,7 @@ typedef struct produto{
 
 void cadastro_produto(Produto *p){
     int opcao;
-    printf("Cadastro\n");
+    printf("***CADASTRO***\n");
     printf("Informe o nome do produto: ");
     scanf("%[^\n]", p->nome);
   
@@ -28,7 +28,7 @@ void cadastro_produto(Produto *p){
 }
 
 void imprime(Produto *p){
-    printf("Dados cadastrados: \n");
+    printf("***DADOS CADASTRADOS***\n");
     printf("Nome: %s\n", p->nome);
     printf("Idade: %.2f\n", p->preco);
     printf("Tipo: %s\n", p->tipo_produto == ALIMENTO? "Alimento" : p->tipo_produto == BEBIDA ? "Bebida" : "Eletronico");
