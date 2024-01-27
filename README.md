@@ -24,6 +24,8 @@
 
 - `Struct:`  Activities on  Struct in the  C language.
 
+- `Structed types: ` proposed exercise list revolution
+
 - `Extra:`Contains solutions to questions from the recommended book, as well as problems from the classroom, as well as other exercises designed for personal study.
 
 - `Test:` Level test for the algorithms discipline.
@@ -33,6 +35,10 @@
 - `Dynamic Allocation:` Activities related to dynamic memory allocation in the C language.
 
 - `Dynamic vector allocation:` Related activities on dynamic vector allocation in C.
+
+- `Enun: ` Activites about enumeration in C.
+
+- `Union: `Activities 
 
 
 
