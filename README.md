@@ -24,7 +24,7 @@
 
 - `Struct:`  Activities on  Struct in the  C language.
 
-- `Structed types: ` proposed exercise list revolution
+- `Structed types: ` Proposed exercise list revolution.
 
 - `Extra:`Contains solutions to questions from the recommended book, as well as problems from the classroom, as well as other exercises designed for personal study.
 
