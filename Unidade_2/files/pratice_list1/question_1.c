@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main(void){
-    FILE *entrada=fopen("entrada.txt", "r");
+    FILE *entrada=fopen("entrada_q1.txt", "r");
     FILE *saida= fopen("saida_q1.txt", "w");
     
     if (entrada==NULL || saida==NULL) {
