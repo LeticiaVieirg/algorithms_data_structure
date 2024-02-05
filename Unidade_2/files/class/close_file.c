@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 int main(void){
 	FILE *arquivo=fopen("entrada.txt", "wt");
 
