@@ -35,7 +35,7 @@ void imprime_dados(Aluno * estudante){
     printf("IRA: %.2f\n", estudante->IRA);
 }
 
-void libera_dados(Aluno *estudante){
+void libera(Aluno *estudante){
     printf("Aguarde,a memória esta sendo liberada\n");
     free(estudante);
     printf("Memória liberada!\n");
