@@ -8,41 +8,43 @@ struct ingresso {
     char atracao[30];
 };
 
-void preenche(Ingresso *i) {
+void preenche(Ingresso *ingressos) {
     printf("Digite o preco do ingresso: \n");
-    scanf("%f", &i->preco);
+    scanf("%f", &ingressos->preco);
     printf("Digite o local: \n");
-    scanf(" %[^\n]", i->local);
+    scanf(" %[^\n]", ingressos->local);
     printf("Digite a atracao: \n");
-    scanf(" %[^\n]", i->atracao);
+    scanf(" %[^\n]", ingressos->atracao);
 }
 
-void imprime(Ingresso *i) {
-    printf("Preco: %.2f \n", i->preco);
-    printf("Local: %s \n", i->local);
-    printf("Atracao:%s \n", i->atracao);
+void imprime(Ingresso *ingressos) {
+    printf("Preco: %.2f \n", iingressos->preco);
+    printf("Local: %s \n", ingressos->local);
+    printf("Atracao:%s \n", ingressos->atracao);
 }
 
-void altera_preco(Ingresso *i, float valor) {
-    printf("Valor atual do ingresso: %.2f \n", i->preco);
-    i->preco = valor; // i->preco recebeu o conteudo de valor
-    printf("Novo valor atualizado: %.2f \n", i->preco);
-    imprime(i);
+void altera_preco(Ingresso *ingressos, float valor) {
+    printf("Valor atual do ingresso: %.2f \n", ingressos->preco);
+    ingressos->preco = valor; // i->preco recebeu o conteudo de valor
+    printf("Novo valor atualizado: %.2f \n", ingressos->preco);
+    imprime(ingressos);
 }
 
-void imprime_menor_maior_preco(int n, Ingresso *vet) {
-    int ingressoBarato = 0, ingressoCaro = 0;
+void maior_e_menor_valor(int q, Ingresso *id) {
     int i;
-    for (i = 0; i < n; i++) {
-        if (vet[i].preco > vet[ingressoCaro].preco) {
-            ingressoCaro = i; // ser o preco do ingresso da posicao i for maior que o atual com o ingresso mais caro, esse ingresso recebera a variavel ingressoCaro
+    int menorPreco = 0;
+    int maiorPreco = 0;
+    
+    for (i = 0; i < q; i++) {
+        if (id[i].preco > id[maiorPreco].preco) {
+            maiorPreco = i;
         }
-        else if (vet[i].preco < vet[ingressoBarato].preco){
-            ingressoBarato = i; // mesma coisa com o ingressoBarato so que menor
+        else if (id[i].preco < id[menorPreco].preco){
+            menorPreco = i; 
         }
     }
     printf("Ingresso mais caro: \n");
-    imprime(&vet[ingressoCaro]);
+    imprime(&id[maiorPreco]);
     printf("Ingresso mais barato: \n");
-    imprime(&vet[ingressoBarato]);
+    imprime(&id[menorPreco]);
 }
