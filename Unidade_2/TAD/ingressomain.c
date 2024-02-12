@@ -16,9 +16,9 @@ int main(void){
         preenche(&ingressos[i]);
     }
 
-    imprima(ingressos, quantidade);
+    imprime(ingressos, quantidade);
     altera_preco(quantidade, ingressos);
-    menor_e_maior_valor(quantidade, ingressos);
+    maior_e_menor_valor(quantidade, ingressos);
     free(ingressos);
 
     return 0;
