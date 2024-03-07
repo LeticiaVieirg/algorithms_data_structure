@@ -6,20 +6,20 @@ float (*operacoes[5])(float, float) = {adicao, subtracao, multiplicacao, divisao
 
 void menu() {
     int opcao = 0;
-    float primeiro_numero, segundo_numero;
+    float n1, n2;
 
     while (opcao != 6) {
         exibirMenu();
         printf("Digite o primeiro numero: ");
-        scanf("%f", &primeiro_numero);
+        scanf("%f", &n1);
         printf("Digite o segundo numero: ");
-        scanf("%f", &segundo_numero);
+        scanf("%f", &n2);
 
         printf("Digite a opcao desejada: ");
         scanf("%d", &opcao);
 
         if (opcao >= 1 && opcao <= 5) {
-            printf("Resultado: %.2f\n", operacoes[opcao - 1](primeiro_numero, segundo_numero));
+            printf("Resultado: %.2f\n", operacoes[opcao - 1](n1, n2));
         } else if (opcao == 6) {
             printf("Saindo...\n");
         } else {
@@ -41,31 +41,31 @@ void exibirMenu() {
     printf("=====================================\n");
 }
 
-float adicao(float a, float b) {
-    return a + b;
+float adicao(float n1, float n2) {
+    return n1 + n2;
 }
 
-float subtracao(float a, float b) {
-    return a - b;
+float subtracao(float n1, float n2) {
+    return n1 - n2;
 }
 
-float multiplicacao(float a, float b) {
-    return a * b;
+float multiplicacao(float n1, float n2) {
+    return n1 * n2;
 }
 
-float divisao(float a, float b) {
-    if (b != 0) {
-        return a / b;
+float divisao(float n1, float n2) {
+    if (n2 != 0) {
+        return n1 / n2;
     } else {
         printf("Erro: Divisao por zero!\n");
         return 0;
     }
 }
 
-float potenciacao(float a, float b) {
+float potenciacao(float base, float expoente) {
     float result = 1;
-    for (int i = 0; i < b; i++) {
-        result *= a;
+    for (int i = 0; i < expoente; i++) {
+        result *= base;
     }
     return result;
 }
