@@ -1,56 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct aluno {
-  char nome[50];
-  float nota1;
-  float nota2;
-  float nota3;
-} Aluno;
+typedef struct fruta{
+    char nome[15];
+    float preco;
+} Fruta;
 
-void preenche_notas (struct Aluno *estudante, int quantidade){
-  int i;
-  for (i=0, i<quantidade; i++){
-    printf("===Informe os seguintes dados===");
-    printf("Nome do aluno: ");
-    scanf("%[^\n]s", estudante[i].nome);
-
-    printf("Primeira nota: ");
-    scanf("%f", &estudante[i].nota1);
+void preencher_arquivo(){
+    FILE *entrada = fopen("frutas.txt", "a");
     
-    printf("Segunda nota: ");
-    scanf("%f", &estudante[i].nota2);
-      
-    printf("Primeira nota: ");
-    scanf("%f", &estudante[i].nota3);
+    if(entrada == NULL){
+        printf("Erro ao tentar abrir o arquivo.\n");
+        exit(1);
+    }
+    Fruta fruta;
 
-    fprintf(arquivo, "%s\t%f\t%f\t%f\n", aluno[i].nome, aluno[i].nota1, aluno[i].nota2, aluno[i].nota3);
+    printf("Informe o nome da fruta: ");
+    scanf(" %[^\n]", fruta.nome);
+  
+    printf("Informe o preco da fruta: ");
+    scanf("%f", &fruta.preco);
 
-  }
+    fprintf(entrada, "%s,\t%.2f\n", fruta.nome, fruta.preco);
+
+    fclose(entrada);
 }
 
-int main (){
+int main(){
+    int quantidade;
 
-  FILE *arquivo;
-  char nome_arquivo[50];
-  int n;
+    printf("Informe a quantidade de frutas que deseja adicionar: ");
+    scanf("%d", &quantidade);
 
-  printf("Informe o nome do arquivo: ");
-  scanf("%[^\n]", nome_arquivo);
+    if (quantidade <= 0){
+        printf("Finalizando.\n");
+        exit(1);
+    } else{
+        for (int i = 0; i < quantidade; i++){
+            preenche_arquivo();
+        }
+        printf("Fim do cadastro de frutas!\n");
+    }
 
-  arquivo=fopen(nome_arquivo, "a");
-  if (arquivo==NULL){
-    printf("Erro ao abrir o arquivo!");
-    exit(1);
-  }
-
-  printf("Digite o numero de alunos: ");
-  scanf("%d", &n);
-  Aluno *aluno = (Aluno*) malloc(n*sizeof(Aluno));
     
-  preeche_notas();
-  fclose(arquivo);
-  free(arquivo);
-
-  return 0;
+    return 0;
 }
