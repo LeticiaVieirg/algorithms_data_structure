@@ -1,24 +1,6 @@
 #include <stdio.h>
 #include "calculadora.h"
 
-// Protótipo da função para adição
-float adicao(float, float);
-
-// Protótipo da função para subtração
-float subtracao(float, float);
-
-// Protótipo da função para multiplicação
-float multiplicacao(float, float);
-
-// Protótipo da função para divisão
-float divisao(float, float);
-
-// Protótipo da função para potenciação
-float potenciacao(float, float);
-
-// Protótipo da função para exibir o menu
-void exibirMenu();
-
 // Array de ponteiros para função
 float (*operacoes[5])(float, float) = {adicao, subtracao, multiplicacao, divisao, potenciacao};
 
