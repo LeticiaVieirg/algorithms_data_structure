@@ -1,51 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct aluno{
-    char nome[50];
+typedef struct aluno {
+    char name[20];
     float nota1;
     float nota2;
     float nota3;
+    float media;
 } Aluno;
 
-int main() {
-    
-    FILE *arquivo;
-    char arquivoNotas[50];
-    int n;
-  
-    printf("Digite o nome do arquivo: ");
-    scanf(" %[^\n]", arquivoNotas);
-   
-    arquivo = fopen(arquivoNotas, "w");
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo!");
+
+void adicionar_aluno(){
+    Aluno aluno;
+
+    FILE *entrada = fopen("alunos.txt", "a");
+
+    if (entrada == NULL){ 
+        printf("Erro!\n");
         exit(1);
     }
 
-    printf("Digite o numero de alunos: ");
-    scanf("%d", &n);
-    Aluno *aluno = (Aluno*) malloc(n*sizeof(Aluno));
+    printf("Informe o nome do aluno: ");
+    scanf(" %[^\n]s", aluno.name);
     
-    int i; 
-    for (i = 0; i < n; i++) {
-        printf("Digite o nome do aluno: ");
-        scanf("%s", aluno[i].nome);
-      
-        printf("Digite a nota 1 do aluno: ");
-        scanf("%f", &aluno[i].nota1);
-      
-        printf("Digite a nota 2 do aluno: ");
-        scanf("%f", &aluno[i].nota2);
-      
-        printf("Digite a nota 3 do aluno: ");
-        scanf("%f", &aluno[i].nota3);
+    printf("Informe a primeira nota: ");
+    scanf("%f", &aluno.nota1);
+    
+    printf("Informe a segunda nota: ");
+    scanf("%f", &aluno.nota2);
+    
+    printf("Informe a terceira nota: ");
+    scanf("%f", &aluno.nota3);
+    
+    fprintf(entrada, "%s\t%.1f\t%.1f\t%.1f\n", aluno.name, aluno.nota1, aluno.nota2, aluno.nota3);
+    printf("Aluno adicionado!\n");
+    fclose(entrada);
 
-        fprintf(arquivo, "%s\t%f\t%f\t%f\n", aluno[i].nome, aluno[i].nota1, aluno[i].nota2, aluno[i].nota3);
+}
+
+int main(){
+    int quantidade;
+
+    printf("Informe a quantidade de alunos que deseja adicionar: ");
+    scanf("%d", &quantidade);
+
+    for (int i = 0; i < quantidade; i++){
+        adicionar_aluno();
     }
-
-    fclose(arquivo);
-    free(aluno);
     return 0;
-
 }
