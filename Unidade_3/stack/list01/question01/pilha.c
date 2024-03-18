@@ -11,10 +11,10 @@ Pilha * pilha_cria(void) {
     exit(1);
   }
   stack->vet=(float*)malloc(N*sizeof(float));
-  if (stack->==NULL) {
+  if (stack->vet==NULL) {
     exit(1);
   }
-  return p;
+  return strack;
 }
 
 void pilha_push(Pilha*´p. float v){
