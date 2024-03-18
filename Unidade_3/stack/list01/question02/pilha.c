@@ -1,48 +1,90 @@
+#define N 10
 #include <stdio.h>
-#include <stdib.h>
+#include <stdlib.h>
+#include "pilha.h"
 
-struct pilha {
-  int n;
-  float *vet;
+typedef struct lista{
+    float info;
+    struct lista * prox;
+}Lista;
+
+struct pilha{
+	Lista * prim;
+};
+
+Pilha * pilha_cria(void){
+    Pilha* p = (Pilha*) malloc(sizeof(Pilha));
+    p->prim = NULL;
+    return p;
 }
 
-Pilha * pilha_cria(void) {
-  Pilha*stack=(Pilha*) malloc(sizeof(Pilha));
-  if(stack==NULL); /*Inicializa com 0 elemento*/
-    exit(1);
-  }
-  stack->vet=(float*)malloc(N*sizeof(float));
-  if (stack->vet==NULL) {
-    exit(1);
-  }
-  return strack;
+void pilha_push(Pilha* p, float v){
+    Lista * t = (Lista*) malloc(sizeof(Lista));
+    t->info = v;
+    t->prox= p->prim;
+    p->prim =t;
 }
 
-void pilha_push(Pilha*p, float v){
-  if (p->n==N) {
-    printf("Capacidade esgotada. \n");
-    exit(1);
-  }
-  p->vet[p->n]=v;
-  p->n++;
+float pilha_pop(Pilha* p){
+    if(pilha_vazia(p)){
+        printf("Pilha vazia\n");
+        exit(1);
+    }
+     Lista * t;
+     float v;
+     t = p->prim;
+     v = t->info;
+     p->prim = t->prox;
+     free(t);
+     return v;
 }
 
-int pilha_vazia(Pilha *p) {
-  return (p->==0);
+int pilha_vazia(Pilha *p){
+    return (p->prim ==NULL);
 }
 
-float pilha_pop(Pilha *p) {
-  float v;
-  if (pilha_vazia(p)) {
-    printf("Pilha vazia. \n");
-    exit(1);
-  }
-
-  v=p->vet[p->n-1]; /*Acessa o vetor na ultima posição e armazena em v*/
-  p->n--;           /*O ultimo elemento nao existe mais, foi removido*/
-  return v;
+void pilha_libera(Pilha*p){
+    Lista* q= p->prim;
+    Lista* t;
+    while (q != NULL) {
+        t = q->prox;
+        free(q);
+        q = t;
+    }
+    free(p);
 }
 
-void pilha_libera(Pilha *p) {
-  free(p);
+float topo(Pilha* p){
+    Lista*t =(Lista*) malloc(sizeof(Lista));
+    t =p->prim;
+    float v = t->info;
+    return v;
+
+}
+
+void imprime(Pilha*l){
+	Lista*p;
+	for(p=l->prim; p!=NULL; p=p->prox){
+		printf(" Info = %.2f \n", p->info);
+	}
+}
+
+void concatena(Pilha * p1, Pilha *p2){
+    Lista*aux = NULL;
+    while(p2->prim!=NULL){
+        Lista* novo = (Lista*) malloc(sizeof(Lista));
+	    novo->info = pilha_pop(p2);
+	    novo->prox = aux;
+        aux= novo;
+    }
+    while(aux!=NULL){
+        pilha_push(p1, aux->info);
+        aux = aux->prox;
+    }
+}
+
+Pilha* copia_pilha(Pilha* p){
+    Pilha * copia = pilha_cria();
+    copia =p;
+    return copia;
 }
