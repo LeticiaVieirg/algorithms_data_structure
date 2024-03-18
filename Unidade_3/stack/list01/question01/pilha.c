@@ -2,12 +2,18 @@
 
 struct pilha {
   int n;
-  float vet[N];
+  float *vet;
 }
 
 Pilha * pilha_cria(void) {
-  Pilha*p=(Pilha*) malloc(sizeof(Pilha));
-  p->n=0; /*Inicializa com 0 elemento*/
+  Pilha*stack=(Pilha*) malloc(sizeof(Pilha));
+  if(stack==NULL); /*Inicializa com 0 elemento*/
+    exit(1);
+  }
+  stack->vet=(float*)malloc(N*sizeof(float));
+  if (stack->==NULL) {
+    exit(1);
+  }
   return p;
 }
 
